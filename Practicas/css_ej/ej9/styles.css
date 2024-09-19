@@ -1,0 +1,23 @@
+.block {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+#red{
+    top: 100px;
+    left: 100px;
+    background-color: red;
+}
+
+#blue{
+    top: 150px;
+    left: 150px;
+    background-color: blue;
+}
+
+#green{
+    top: 200px;
+    left: 200px;
+    background-color: green;
+}

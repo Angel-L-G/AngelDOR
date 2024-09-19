@@ -1,0 +1,23 @@
+thead>tr>td {
+    border: 0px;
+    font-weight: bold;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+tbody>tr>td {
+    border: 2px solid #dddddd;
+    width: 200px;
+}
+
+table {
+    border-collapse: collapse;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+tbody>tr>td:nth-child(even) {
+    text-align: center;
+}

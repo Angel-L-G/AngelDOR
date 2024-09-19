@@ -1,0 +1,21 @@
+.titulo {
+    color: blue;
+    font-size: 24px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    text-decoration: underline;
+}
+
+#p1{
+    color: red;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-align: end;
+}
+
+#p2{
+    color: blue;
+    text-align: start;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}

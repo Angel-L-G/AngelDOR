@@ -1,0 +1,33 @@
+@media only screen and (min-width: 1200px) {
+    .container{
+        display: flex;
+        flex-direction: row;
+    }
+    .inner-container{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 600px) and  (max-width: 1200px) {
+    .container{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .inner-container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .inner-container{
+        display: flex;
+        flex-direction: column;
+    }
+}
