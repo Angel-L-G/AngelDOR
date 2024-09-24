@@ -1,90 +1,96 @@
 //import {Pokemon} from "./classes/Pokemon.js";
 
-async function fetchPokemons() {
-    let response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151");
-    let fetchedPokemons = await response.json();
-    console.log(fetchedPokemons);
-    let items = await fetchedPokemons.results;
-    //let pokemons = [];
-
-    items.forEach(poke => {
-        //let p = new Pokemon(poke.name, poke.url);
-        //pokemons.push(p);
-
-        let htmlList = document.getElementById("items");
-        let li = document.createElement("li");
-        li.innerHTML = poke.name;
-        htmlList.appendChild(li);
-    });
-
-    //console.log(pokemons);
-}
-
-fetchPokemons();
-
-/*async function fetchdata(uri, resultType){
+//Function for fetchong the data from the pokeapi
+async function fetchdata(uri, resultType){
     let response = await fetch("https://pokeapi.co/api/v2/"+uri);
     let fetchedData = await response.json();
     let items;
 
-    if(resultType === "pokemon"){
-        items = await fetchedData.results;
-    } else if(resultType === "type"){
-        items = await fetchedData.pokemon;
-    } else if(resultType === "generation"){
-
-    } else if(resultType === "stats"){
-    
+    switch (resultType) {
+        case "pokemon":
+            items = await fetchedData.results;
+            break;
+        case "type":
+            items = await fetchedData.pokemon;
+            break;
+        case "generation":
+            items = await fetchedData.pokemon_species;
+            break;
     }
 
     return items;
-}*/
-
-async function setHtml(){
-    
 }
 
-async function fetchByType() {
-    
+//This function sets the list on the html.
+async function setHtml(items){
+    let htmlList = document.getElementById("items");
+    htmlList.innerHTML = "";
 
+    items.forEach(poke => {
+        let li = document.createElement("li");
+        li.innerHTML = poke.name;
+        htmlList.appendChild(li);
+    });
+}
+
+async function fetchPokemons() {
+    let items = await fetchdata("pokemon?limit=151", "pokemon");
+    setHtml(items);
+}
+
+fetchPokemons();
+
+async function fetchPokemonsByType() {
     let input = document.getElementById("typeFilter");
     let type = input.value;
-    let response = await fetch("https://pokeapi.co/api/v2/type/"+type);
-    let fetchedPokemons = await response.json();
-    let items = await fetchedPokemons.pokemon;
-    //let pokemons = [];
-    console.log(items);
 
-    items.forEach(poke => {
-        //let p = new Pokemon(poke.pokemon.name, poke.pokemon.url);
-        //pokemons.push(p);
+    let items = await fetchdata("type/"+type, "type");
+    let newItems = [];
 
-        let li = document.createElement("li");
-        li.innerHTML = poke.pokemon.name;
-        htmlList.appendChild(li);
-    });
+    for (let index = 0; index < items.length; index++) {
+        newItems.push(items[index].pokemon)
+    }
 
-    //console.log(pokemons);
+    setHtml(newItems);
 }
 
-async function fetchByGen() {
-    let gen = document.getElementById("genFilter").innerText;
-    let response = await fetch("https://pokeapi.co/api/v2/generation/"+gen);
-    
-    let fetchedPokemons = await response.json();
-    let items = await fetchedPokemons.pokemon;
-    //let pokemons = [];
-    console.log(items);
+async function fetchPokemonsByGen() {
+    let input = document.getElementById("genFilter");
+    let gen = input.value;
 
-    items.forEach(poke => {
-        //let p = new Pokemon(poke.pokemon.name, poke.pokemon.url);
-        //pokemons.push(p);
+    let items = await fetchdata("generation/"+gen, "generation");
+    setHtml(items);
+}
 
-        let htmlList = document.getElementById("items");
-        let li = document.createElement("li");
-        li.innerHTML = p.name;
-        htmlList.appendChild(li);
-    });
+async function filterByTotalStats(items, stat) {
+    setHtml([{name: "Loading"},{name: "."},{name: "."},{name: "."}])
 
-    //console.log(pokemons);
+    let newItems = await Promise.all(items.map(async (pokemon) => {
+        let response = await fetch(pokemon.url);
+        let fetchedData = await response.json();
+        let totalStats = 0;
+
+        fetchedData.stats.forEach(stat => {
+            totalStats += stat.base_stat;
+        });
+
+        if (totalStats >= stat) {
+            return pokemon;
+        }
+
+        return null;
+    }));
+
+    return newItems.filter(pokemon => pokemon !== null);
+}
+
+async function fetchPokemonByStats() {
+    let input = document.getElementById("statFilter");
+    let stat = input.value;
+
+    let items = await fetchdata("pokemon?limit=1025", "pokemon");
+
+    let newItems = await filterByTotalStats(items, stat);
+
+    setHtml(newItems);
 }

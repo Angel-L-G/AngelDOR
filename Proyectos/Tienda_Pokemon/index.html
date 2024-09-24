@@ -16,15 +16,15 @@
         <div>
             <input type="text" id="typeFilter"
                 placeholder="Buscar por tipo..."/>
-                <button onclick="fetchByType()">Search</button>
+                <button onclick="fetchPokemonsByType()">Search</button>
                 <br>
-            <input type="text" id="genFilter"
+            <input type="number" id="genFilter"
                 placeholder="Buscar por generación..."/>
-                <button onclick="">Search</button>
+                <button onclick="fetchPokemonsByGen()">Search</button>
                 <br>
-            <input type="text" id="powerFilter"
+            <input type="number" id="statFilter"
                 placeholder="Buscar por Poder Total..."/>
-                <button onclick="">Search</button>
+                <button onclick="fetchPokemonByStats()">Search</button>
                 <br>
         </div>
         <div>
