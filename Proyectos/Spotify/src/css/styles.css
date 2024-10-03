@@ -1,0 +1,82 @@
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.cover {
+  display: flex;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+}
+
+.cover-1 {
+  background-image: url("../assets/img/Cover1.jpg");
+  background-size: cover;
+}
+
+.cover-2 {
+  background-image: url("../assets/img/Cover2.jpg");
+  background-size: cover;
+}
+
+.cover-3 {
+  background-image: url("../assets/img/Cover3.jpeg");
+  background-size: cover;
+}
+
+.vinyl {
+  position: absolute;
+  z-index: -1;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  background-image: linear-gradient(black, rgb(92, 92, 92), black);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail {
+  z-index: 0;
+  width: 125px;
+  height: 125px;
+  background-image: linear-gradient(blue, rgb(88, 88, 253), blue);
+  border-radius: 50%;
+  margin: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  background-image: linear-gradient(
+    rgb(109, 109, 255),
+    rgb(143, 143, 255),
+    rgb(109, 109, 255)
+  );
+  border-radius: 50%;
+  margin: 25px;
+}
+
+.hole {
+  z-index: 2;
+  width: 5px;
+  height: 5px;
+  margin: 22px;
+  background-color: aliceblue;
+  border-radius: 50%;
+}
+
+.playing {
+  transform: translate(0px) rotate(0deg) skew(0deg);
+  transition-duration: 1s;
+}
+
+.pausing {
+  transform: translate(110px) rotate(360deg) skew(0.5turn, 0deg);
+  transition-duration: 1s;
+}
