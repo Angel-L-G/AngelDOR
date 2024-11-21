@@ -1,0 +1,12 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.bodySize{
+    width: 100vh;
+    height: 59vh;
+}

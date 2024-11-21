@@ -1,0 +1,12 @@
+body {
+    background: url("../images/hero-bg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bodySize{
+    width: 100vh;
+}

@@ -114,6 +114,8 @@ async function fetchData() {
         champions.push(c);
     }
 
+    
+
     setHtml(champions);
 }
 
