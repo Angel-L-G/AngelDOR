@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Notificaciones</title>
+  <script>
+    function mostrarNotificacion() {
+      document.getElementById('notificacion').innerText = 'Cambio guardado';
+    }
+  </script>
+</head>
+<body>
+  <button onclick="mostrarNotificacion()">Guardar</button>
+    <!-- Añadir el "aria-live" en "polite" para este caso asi avisara del cambio del texto sin interrumpir en el momento en el que cambie-->
+  <div id="notificacion" aria-live="polite"></div>
+</body>
+</html>

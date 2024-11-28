@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Registro</title>
+</head>
+<body>
+  <h1>Formulario de Registro</h1>
+  <form>
+    <!-- Anadir el label y el span para que el describeby lo lea cuando falle-->
+    <label for="nombre">Nombre</label>
+    <input id="nombre" type="text" placeholder="Nombre" aria-describedby="nombre-help">
+    <span id="nombre-help">Nombre Mal Introducido.</span>
+    <label for="email">Email</label>
+    <input id="email" type="email" placeholder="Correo electrónico" aria-describedby="email-help">
+    <span id="email-help">Email Mal Introducido.</span>
+    <button>Enviar</button>
+  </form>
+</body>
+</html>

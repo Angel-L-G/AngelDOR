@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Formulario de Inscripción</title>
+</head>
+<body>
+    <!--
+        Añadir etiquetas "label" a los inputs
+        Añadir atributo "aria-label" a los inputs
+        Añadir atributo "aria-expanded" a el select
+        Añadir atributo "aria-describedby" a el span
+        Añadir atributo "aria-label" al boton
+    -->
+  <h1>Formulario de Inscripción</h1>
+  <form>
+    <div>
+        <label for="nombre"></label>
+      <input aria-label="Nombre completo" id="nombre" type="text" placeholder="Nombre completo">
+    </div>
+    <div>
+        <label for="email"></label>
+      <input aria-label="Correo Electronico" id="email" type="email" placeholder="Correo electrónico">
+    </div>
+    <div>
+      <select aria-expanded="false" aria-describedby="ErrPais">
+        <option>Seleccionar país</option>
+        <option>México</option>
+        <option>España</option>
+        <option>Colombia</option>
+      </select>
+      <span id="ErrPais">Erro al elegir el pais</span>
+    </div>
+    <div>
+      <button aria-label="Enviar Formulario">Enviar</button>
+    </div>
+  </form>
+</body>
+</html>
