@@ -1,0 +1,547 @@
+/*
+//////////////////////////////////////////////////////
+Ejercicio 1
+//////////////////////////////////////////////////////
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+button:hover {
+  background-color: #fff;
+  color: #333;
+}*/
+$color-black: #333;
+$color-white: #fff;
+
+
+button {
+  background-color: $color-black;
+  color: $color-white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+
+  &:hover {
+    background-color: $color-white;
+    color: $color-black;
+  }
+}
+/*
+///////////////////////////////////////////////
+ Ejercicio 2 
+///////////////////////////////////////////////
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container h1 {
+  font-size: 24px;
+  color: #333;
+}
+.container p {
+  font-size: 16px;
+  color: #666;
+}*/
+
+$color-grey: #666;
+$width-100: 100%;
+
+.container {
+    width: $width-100;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h1 {
+        font-size: 24px;
+        color: $color-black;
+    }
+
+    p {
+        font-size: 16px;
+        color: $color-grey;
+    }
+}
+/*
+///////////////////////////////////////////////////
+Ejercicio 3 
+//////////////////////////////////////////////////
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+*/
+
+nav {
+    ul li {
+        display: inline-block;
+        margin-right: 20px;
+
+        a {
+            color: $color-black;
+            text-decoration: none;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+/*
+///////////////////////////////////////////////
+/// Ejercicio 4 
+//////////////////////////////////////////////
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container .row {
+  display: flex;
+  justify-content: space-between;
+}
+.container .row .col {
+  width: 30%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+}*/
+
+$color-light-grey: #f2f2f2;
+.container{
+    width: $width-100;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+
+        .col {
+            width: 30%;
+            background-color: $color-light-grey;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
+/*
+/////////////////////////////////////////////
+/// Ejercicio 5 
+////////////////////////////////////////////
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container h1 {
+  font-size: 24px;
+  color: #333;
+}
+.container p {
+  font-size: 16px;
+  color: #666;
+}
+.btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+.container .btn:hover {
+  background-color: #fff;
+  color: #333;
+}
+*/
+
+.container {
+    width: $width-100;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h1 {
+        font-size: 24px;
+        color: $color-black;
+    }
+
+    p {
+        font-size: 16px;
+        color: $color-grey;
+    }
+
+    .btn:hover {
+        background-color: $color-white;
+        color: $color-black;
+    }
+}
+
+.btn {
+    background-color: $color-black;
+    color: $color-white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+/*
+////////////////////////////////////////////
+/// Ejercicio 6 
+////////////////////////////////////////////
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container h1 {
+  font-size: 24px;
+  color: #333;
+}
+.container p {
+  font-size: 16px;
+  color: #666;
+}
+.container .btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+.container .btn:hover {
+  background-color: #fff;
+  color: #333;
+}*/
+
+.container {
+    width: $width-100;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h1 {
+        font-size: 24px;
+        color: $color-black;
+    }
+    p {
+        font-size: 16px;
+        color: $color-grey;
+    }
+    .btn{
+        background-color: $color-black;
+        color: $color-white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        &:hover{
+            background-color: $color-white;
+            color: $color-black;
+        }
+    }
+}
+/*
+//////////////////////////////////////////////////////
+/// Ejercicio 7 
+/////////////////////////////////////////////////////
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+ul li a {
+  color: #333;
+  text-decoration: none;
+}
+nav ul a:hover {
+  text-decoration: underline;
+}*/
+nav ul {
+    li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
+
+ul li a {
+    color: $color-black;
+    text-decoration: none;
+}
+/*
+/////////////////////////////////////////////////////
+//Ejercicio 8 
+////////////////////////////////////////////////////
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container .row {
+  display: flex;
+  justify-content: space-between;
+}
+.container .row .col {
+  width: 30%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+}*/
+
+.container {
+    width: $width-100;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        .col {
+            width: 30%;
+            background-color: $color-light-grey;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
+/*
+/////////////////////////////////////////
+//Ejercicio 9 
+/////////////////////////////////////////
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container h1 {
+  font-size: 24px;
+  color: #333;
+}
+.container p {
+  font-size: 16px;
+  color: #666;
+}
+.container .btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+.container .btn:hover {
+  background-color: #fff;
+  color: #333;
+}*/
+
+.container {
+    width: $width-100;
+    max-width: 1200px;
+    margin: 0 auto;
+    h1{
+        font-size: 24px;
+        color: $color-black;
+    }
+    p{
+        font-size: 16px;
+        color: $color-grey;
+    }
+    .btn {
+        background-color: $color-black;
+        color: $color-white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+
+        &:hover{
+            background-color: $color-white;
+            color: $color-black;
+        }
+    }
+}
+/*
+///////////////////////////////////////////////////
+//Ejercicio 10 
+///////////////////////////////////////////////////
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container h1 {
+  font-size: 24px;
+  color: #333;
+}
+.container p {
+  font-size: 16px;
+  color: #666;
+}*/
+
+.container {
+    width: $width-100;
+    max-width: 1200px;
+    margin: 0 auto;
+    h1{
+        font-size: 24px;
+        color: $color-black;
+    }
+    p {
+        font-size: 16px;
+        color: $color-grey;
+    }
+}
+/*
+/////////////////////////////////////////////
+//Ejercicio 11 
+////////////////////////////////////////////
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+}
+ul li a:hover {
+  text-decoration: underline;
+}*/
+
+nav ul {
+    li {
+        display: inline-block;
+        margin-right: 20px;
+        a{
+            color: $color-black;
+            text-decoration: none;
+        }
+    }
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+/*
+/////////////////////////////////////////////////////
+//Ejercicio 12 
+//////////////////////////////////////////////////////
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container .row {
+  display: flex;
+  justify-content: space-between;
+}
+.container .row .col {
+  width: 30%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+}*/
+
+.container {
+    width: $width-100;
+    max-width: 1200px;
+    margin: 0 auto;
+    .row {
+        display: flex;
+        justify-content: space-between;
+        .col{
+            width: 30%;
+            background-color: $color-light-grey;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
+/*
+///////////////////////////////////////
+//Ejercicio 13 
+//////////////////////////////////////
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container .btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+.container .btn:hover {
+  background-color: #fff;
+  color: #333;
+}*/
+
+.container {
+    width: $width-100;
+    max-width: 1200px;
+    margin: 0 auto;
+    .btn {
+        background-color: $color-black;
+        color: $color-white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        &:hover {
+            background-color: $color-white;
+            color: $color-black;
+        }
+    }
+}
+/*
+///////////////////////////////////////////
+//Ejercicio 14 
+//////////////////////////////////////////
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container a {
+  display: flex;
+  justify-content: space-between;
+}
+.container .row .col {
+  width: 30%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.container .row .col:first-child {
+  background-color: #333;
+  color: #fff;
+}*/
+
+.container {
+    width: $width-100;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    a {
+        display: flex;
+        justify-content: space-between;
+    }
+    .row {
+        .col{
+            width: 30%;
+            background-color: $color-light-grey;
+            padding: 20px;
+            margin-bottom: 20px;
+            &:first-child {
+                background-color: $color-black;
+                color: $color-white;
+            }
+        }
+    }
+}
