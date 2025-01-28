@@ -1,0 +1,7 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+  color: #da46d0;
+}/*# sourceMappingURL=header.css.map */

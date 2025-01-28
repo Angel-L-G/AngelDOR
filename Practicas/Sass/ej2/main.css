@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+  color: #da46d0;
+}
+
+body {
+  background-color: lightgrey;
+  margin: 0;
+}
+
+* {
+  font-family: "Dancing Script";
+}/*# sourceMappingURL=main.css.map */

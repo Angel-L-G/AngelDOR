@@ -1,0 +1,9 @@
+@import "colors";
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $secondary-bg-black;
+    color: $primary-color;
+}
