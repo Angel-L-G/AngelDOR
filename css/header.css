@@ -2,6 +2,13 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   background-color: black;
   color: #da46d0;
+  padding-inline: 20px;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
 }/*# sourceMappingURL=header.css.map */

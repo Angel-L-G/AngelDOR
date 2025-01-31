@@ -1,7 +1,69 @@
 @import "colors";
 
-body {
-    background-color: $primary-bg-color;
-    margin: 0;
+@mixin imgs($img_url, $width, $height) {
+    background: {
+        image: url($img_url);
+        size: cover;
+    }
+
+    height: $height;
+    width: $width;
 }
 
+.container {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .card {
+        flex: 1 1 45%;
+        background-color: $secondary-bg-black;
+        display: flex;
+        flex-direction: row;
+        height: 300px;
+        min-width: 500px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+        border: {
+            radius: 10px;
+            color: $primary-color;
+            width: 1px;
+        }
+
+        @each $number, $img in 
+            (1, "./img/volcan1.jpeg"),
+            (2, "./img/volcan2.jpeg"), 
+            (3, "./img/volcan3.jpeg"),
+            (4, "./img/volcan4.jpeg")
+        {
+            .img-#{$number} {
+            @include imgs($img, 40%, 100%);
+                margin-right: 10px;
+                border-radius: 10px;
+            }
+        }
+
+        .card-content {
+            margin-right: 20px;
+            width: 60%;
+
+            .card-title {
+                color: $primary-color;
+                margin-bottom: 0;
+                font-size: 20pt;
+            }
+
+            .card-date {
+                color: $info-color;
+                margin-bottom: 15px;
+            }
+            
+            .card-body {
+                color: $secondary-color;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
